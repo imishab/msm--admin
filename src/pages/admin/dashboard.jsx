@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useFetchAdminQuery } from "../../redux/api/adminApi";
 
 export default function Dashboard() {
@@ -25,102 +26,47 @@ export default function Dashboard() {
                     <div className="card">
                       <div className="card-body">
                         <div className="d-flex align-items-center">
-                          <div className="fs-14 mb-1">Website Traffic</div>
+                          <div className="fs-14 mb-1">Manage Zone</div>
                         </div>
-                        <div className="d-flex align-items-baseline mb-2">
-                          <div className="fs-22 mb-0 me-2 fw-semibold text-black">
-                            91.6K
-                          </div>
-                          <div className="me-auto">
-                            <span className="text-primary d-inline-flex align-items-center">
-                              15%
-                              <i
-                                data-feather="trending-up"
-                                className="ms-1"
-                                style={{ height: 22, width: 22 }}
-                              />
-                            </span>
-                          </div>
-                        </div>
+                        <Link
+                          className="btn btn-dark mt-2 btn-sm"
+                          href="/admin/zones/all-zones"
+                        >
+                          All Zones
+                        </Link>{" "}
+                        <Link
+                          className="btn btn-dark mt-2 btn-sm"
+                          href="/admin/zones/add-zone"
+                        >
+                          + Add New Zone
+                        </Link>
                         <div id="website-visitors" className="apex-charts" />
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-6 col-xl-3">
+
+                  {/* <div className="col-md-6 col-xl-3">
                     <div className="card">
                       <div className="card-body">
                         <div className="d-flex align-items-center">
-                          <div className="fs-14 mb-1">Conversion rate</div>
+                          <div className="fs-14 mb-1">Manage Zone</div>
                         </div>
-                        <div className="d-flex align-items-baseline mb-2">
-                          <div className="fs-22 mb-0 me-2 fw-semibold text-black">
-                            15%
-                          </div>
-                          <div className="me-auto">
-                            <span className="text-danger d-inline-flex align-items-center">
-                              10%
-                              <i
-                                data-feather="trending-down"
-                                className="ms-1"
-                                style={{ height: 22, width: 22 }}
-                              />
-                            </span>
-                          </div>
-                        </div>
-                        <div id="conversion-visitors" className="apex-charts" />
+                        <Link
+                          className="btn btn-dark mt-2 btn-sm"
+                          href="/admin/zones/all-zones"
+                        >
+                          All Zones
+                        </Link>{" "}
+                        <Link
+                          className="btn btn-dark mt-2 btn-sm"
+                          href="/admin/zones/add-zone"
+                        >
+                          + Add New Zone
+                        </Link>
+                        <div id="website-visitors" className="apex-charts" />
                       </div>
                     </div>
-                  </div>
-                  <div className="col-md-6 col-xl-3">
-                    <div className="card">
-                      <div className="card-body">
-                        <div className="d-flex align-items-center">
-                          <div className="fs-14 mb-1">Session duration</div>
-                        </div>
-                        <div className="d-flex align-items-baseline mb-2">
-                          <div className="fs-22 mb-0 me-2 fw-semibold text-black">
-                            90 Sec
-                          </div>
-                          <div className="me-auto">
-                            <span className="text-success d-inline-flex align-items-center">
-                              25%
-                              <i
-                                data-feather="trending-up"
-                                className="ms-1"
-                                style={{ height: 22, width: 22 }}
-                              />
-                            </span>
-                          </div>
-                        </div>
-                        <div id="session-visitors" className="apex-charts" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-xl-3">
-                    <div className="card">
-                      <div className="card-body">
-                        <div className="d-flex align-items-center">
-                          <div className="fs-14 mb-1">Active Users</div>
-                        </div>
-                        <div className="d-flex align-items-baseline mb-2">
-                          <div className="fs-22 mb-0 me-2 fw-semibold text-black">
-                            2,986
-                          </div>
-                          <div className="me-auto">
-                            <span className="text-success d-inline-flex align-items-center">
-                              4%
-                              <i
-                                data-feather="trending-up"
-                                className="ms-1"
-                                style={{ height: 22, width: 22 }}
-                              />
-                            </span>
-                          </div>
-                        </div>
-                        <div id="active-users" className="apex-charts" />
-                      </div>
-                    </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>{" "}
               {/* end sales */}
@@ -129,7 +75,7 @@ export default function Dashboard() {
             {/* Start Monthly Sales */}
 
             {/* End Monthly Sales */}
-            <div className="row">
+            {/* <div className="row">
               <div className="col-md-6 col-xl-6">
                 <div className="card">
                   <div className="card-header">
@@ -354,25 +300,11 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>{" "}
           {/* container-fluid */}
         </div>{" "}
         {/* content */}
-        {/* Footer Start */}
-        <footer className="footer">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col fs-13 text-muted text-center">
-                © - Made with <span className="mdi mdi-heart text-danger" /> by{" "}
-                <a href="#!" className="text-reset fw-semibold">
-                  Zoyothemes
-                </a>
-              </div>
-            </div>
-          </div>
-        </footer>
-        {/* end Footer */}
       </div>
     </>
   );

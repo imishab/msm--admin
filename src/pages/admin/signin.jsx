@@ -62,9 +62,9 @@ const Signin = () => {
       <div className="account-page">
         <div className="container-fluid p-0">
           <div className="row align-items-center g-0">
-            <div className="col-xl-5">
+            <div className="col-xl-12">
               <div className="row">
-                <div className="col-md-7 mx-auto">
+                <div className="col-md-3 mx-auto">
                   <div className="mb-0 border-0 p-md-5 p-lg-0 p-4">
                     <div className="mb-4 p-0">
                       <a href="/" className="auth-logo">
@@ -131,7 +131,7 @@ const Signin = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xl-7">
+            {/* <div className="col-xl-7">
               <div className="account-page-bg p-md-5 p-4">
                 <div className="text-center">
                   <div className="auth-image">
@@ -146,7 +146,7 @@ const Signin = () => {
                   </h5>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

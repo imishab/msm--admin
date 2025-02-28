@@ -151,10 +151,31 @@ input:-internal-autofill-selected {
 
 .app-sidebar-menu {
   transition: width 0.3s ease;
+  display: none !important;
   width: 250px; /* Expanded width */
   &.collapsed {
     width: 60px; /* Collapsed width */
   }
+}
+
+.content-page {
+  margin-left: 0px !important;
+  overflow: hidden;
+  padding: 0 12px 65px 12px;
+  min-height: 80vh;
+  margin-top: 70px;
+  transition: all 0.1sease-out;
+}
+.topbar-custom {
+  background-color: #fff;
+  /* padding: 0 calc(1.25rem / 2) 0 0; */
+  position: fixed;
+  left: 0px !important;
+  right: 0;
+  height: 70px;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.04);
+  z-index: 1000;
+  transition: all 0.1sease-out;
 }
 
 .side-menu-items > ul {

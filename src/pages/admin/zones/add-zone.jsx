@@ -157,11 +157,17 @@ export default function addProduct() {
                                 <option value="" selected disabled>
                                   Select Zone
                                 </option>
-                                <option value="Balussery">Balussery</option>
-                                <option value="Poonor">Poonor</option>
-                                <option value="Koyilandi">Koyilandi</option>
-                                <option value="Nadaapuram">Nadaapuram</option>
+                                <option value="Nadappuram">Nadappuram</option>
+                                <option value="Vadakara">Vadakara</option>
+                                <option value="Payyoli">Payyoli</option>
+                                <option value="Koyilandy">Koyilandy</option>
+                                <option value="Meppayur">Meppayur</option>
+
+                                <option value="Perambra">Perambra</option>
                                 <option value="Kuttiyadi">Kuttiyadi</option>
+                                <option value="Balussery">Balussery</option>
+                                <option value="Ponoor">Ponoor</option>
+                                <option value="Other">Other</option>
                               </select>
                             </div>
                           </div>
@@ -211,20 +217,6 @@ export default function addProduct() {
                             onChange={(e) => setNote(e.target.value)}
                           />
                         </div>
-
-                        <button
-                          type="submit"
-                          className="btn btn-md btn-dark  mt-4 w-50 me-1 mb-0"
-                          disabled={isLoading}
-                        >
-                          {isLoading ? "Adding..." : "Add Zone Head"}
-                        </button>
-                        <Link
-                          href="/admin/zones/all-zones"
-                          className="btn btn-md btn-secondary  mt-4 mb-0"
-                        >
-                          Cancel
-                        </Link>
                       </div>
                     </div>
                   </div>
@@ -284,6 +276,19 @@ export default function addProduct() {
                     </div>
                   </div>
                 </div>
+                <button
+                  type="submit"
+                  className="btn btn-md btn-dark  mt-2 w-50 me-1 mb-0"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Adding..." : "Add Zone Head"}
+                </button>
+                <Link
+                  href="/admin/zones/all-zones"
+                  className="btn btn-md btn-secondary  mt-2 mb-0"
+                >
+                  Cancel
+                </Link>
               </form>
               {/* <ToastContainer /> */}
             </div>

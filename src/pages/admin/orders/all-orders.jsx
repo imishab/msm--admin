@@ -349,7 +349,7 @@ export default function AllOrders() {
                       <tr className="item" key={index}>
                         <td>
                           <img
-                            src={`https://backend-tastify.onrender.com${item.product.image}`}
+                            src={`https://backend.msmnorth.com${item.product.image}`}
                             alt={item.product.title}
                             style={{
                               width: "50px",

@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import Swal from "sweetalert2";
-import { Pencil, Trash2, Dot } from "lucide-react";
+import { Pencil, Trash2, Dot, ArrowLeft } from "lucide-react";
 
 export default function allZones() {
   const { data: zones, isLoading, isError, refetch } = useFetchZonesQuery("");
@@ -59,7 +59,17 @@ export default function allZones() {
             <div className="col-12">
               <div className="card">
                 <div className="card-header d-flex justify-content-between align-items-center">
-                  <h5 className="card-title mb-0">All Zones</h5>
+                  <div className="d-flex align-items-center">
+                    <Link href="/admin/dashboard">
+                      {" "}
+                      <ArrowLeft
+                        size={18}
+                        color="#000"
+                        className="me-3 mb-0 mt-0"
+                      />
+                    </Link>
+                    <h5 className="font-weight-bolder mt-2">All Zone Heads</h5>
+                  </div>
                   <Link
                     href="/admin/zones/add-zone"
                     className="btn btn-dark btn-sm"
@@ -103,7 +113,7 @@ export default function allZones() {
                               <td>{index + 1}</td>
                               <td className="d-flex">
                                 <img
-                                  src={`http://localhost:4000${zone.image}`}
+                                  src={`https://backend.msmnorth.com${zone.image}`}
                                   alt={zone.name}
                                   className="me-2"
                                   style={{
@@ -158,9 +168,9 @@ export default function allZones() {
                                 </p> */}
                               </td>
                               <td>
-                                <button className="btn btn-dark btn-sm me-2">
+                                {/* <button className="btn btn-dark btn-sm me-2">
                                   <Pencil size={14} />
-                                </button>
+                                </button> */}
                                 <button
                                   className="btn btn-danger btn-sm"
                                   onClick={() => handleDelete(zone._id)}
