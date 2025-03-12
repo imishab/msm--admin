@@ -163,9 +163,9 @@ export default function allZones() {
                                 <p className="mb-0">
                                   <b>ZoneID : </b> {zone.zoneId}
                                 </p>{" "}
-                                {/* <p>
+                                <p>
                                   <b>Password : </b> {zone.password}
-                                </p> */}
+                                </p>
                               </td>
                               <td>
                                 {/* <button className="btn btn-dark btn-sm me-2">

@@ -265,7 +265,7 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 const adminApi = (0, __TURBOPACK__imported__module__$5b$externals$5d2f40$reduxjs$2f$toolkit$2f$query$2f$react__$5b$external$5d$__$2840$reduxjs$2f$toolkit$2f$query$2f$react$2c$__esm_import$29$__["createApi"])({
     reducerPath: 'adminApi',
     baseQuery: (0, __TURBOPACK__imported__module__$5b$externals$5d2f40$reduxjs$2f$toolkit$2f$query$2f$react__$5b$external$5d$__$2840$reduxjs$2f$toolkit$2f$query$2f$react$2c$__esm_import$29$__["fetchBaseQuery"])({
-        baseUrl: 'https://backend.msmnorth.com/api/admin',
+        baseUrl: 'http://localhost:4000/api/admin',
         credentials: 'include',
         prepareHeaders: (headers)=>{
             const token = localStorage.getItem('token');
@@ -1828,7 +1828,24 @@ function allZones() {
                                                                             lineNumber: 163,
                                                                             columnNumber: 33
                                                                         }, this),
-                                                                        " "
+                                                                        " ",
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("b", {
+                                                                                    children: "Password : "
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                                                    lineNumber: 167,
+                                                                                    columnNumber: 35
+                                                                                }, this),
+                                                                                " ",
+                                                                                zone.password
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                                            lineNumber: 166,
+                                                                            columnNumber: 33
+                                                                        }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/pages/admin/zones/all-zones.jsx",

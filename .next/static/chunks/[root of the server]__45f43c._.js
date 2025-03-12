@@ -576,7 +576,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f
 const adminApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$query$2f$react$2f$rtk$2d$query$2d$react$2e$modern$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createApi"])({
     reducerPath: 'adminApi',
     baseQuery: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$query$2f$rtk$2d$query$2e$modern$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["fetchBaseQuery"])({
-        baseUrl: 'https://backend.msmnorth.com/api/admin',
+        baseUrl: 'http://localhost:4000/api/admin',
         credentials: 'include',
         prepareHeaders: (headers)=>{
             const token = localStorage.getItem('token');

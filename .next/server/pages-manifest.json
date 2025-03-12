@@ -2,11 +2,9 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/admin/dashboard": "pages/admin/dashboard.js",
   "/admin/signin": "pages/admin/signin.js",
   "/_error": "pages/_error.js",
+  "/admin/dashboard": "pages/admin/dashboard.js",
   "/admin/zones/all-zones": "pages/admin/zones/all-zones.js",
-  "/admin/zones/add-zone": "pages/admin/zones/add-zone.js",
-  "/admin/category/all-categories": "pages/admin/category/all-categories.js",
-  "/admin/category/add-category": "pages/admin/category/add-category.js"
+  "/admin/zones/add-zone": "pages/admin/zones/add-zone.js"
 }
