@@ -249,7 +249,6 @@ __turbopack_esm__({
     "useFetchAdminQuery": (()=>useFetchAdminQuery),
     "useFetchCategoriesQuery": (()=>useFetchCategoriesQuery),
     "useFetchOrdersQuery": (()=>useFetchOrdersQuery),
-    "useFetchReceiptsQuery": (()=>useFetchReceiptsQuery),
     "useFetchUsersQuery": (()=>useFetchUsersQuery),
     "useFetchZonesQuery": (()=>useFetchZonesQuery),
     "useGenerateImageMutation": (()=>useGenerateImageMutation),
@@ -266,7 +265,6 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 const adminApi = (0, __TURBOPACK__imported__module__$5b$externals$5d2f40$reduxjs$2f$toolkit$2f$query$2f$react__$5b$external$5d$__$2840$reduxjs$2f$toolkit$2f$query$2f$react$2c$__esm_import$29$__["createApi"])({
     reducerPath: 'adminApi',
     baseQuery: (0, __TURBOPACK__imported__module__$5b$externals$5d2f40$reduxjs$2f$toolkit$2f$query$2f$react__$5b$external$5d$__$2840$reduxjs$2f$toolkit$2f$query$2f$react$2c$__esm_import$29$__["fetchBaseQuery"])({
-        // baseUrl: 'http://localhost:4000/api/admin',
         baseUrl: 'https://backend.msmnorth.com/api/admin',
         credentials: 'include',
         prepareHeaders: (headers)=>{
@@ -280,8 +278,7 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$externals$5d2f40$reduxjs
     tagTypes: [
         'Zones',
         'Categories',
-        'Orders',
-        'Receipts'
+        'Orders'
     ],
     endpoints: (builder)=>({
             signup: builder.mutation({
@@ -314,12 +311,6 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$externals$5d2f40$reduxjs
                 query: ()=>'/all-zones',
                 providesTags: [
                     'Zones'
-                ]
-            }),
-            fetchReceipts: builder.query({
-                query: ()=>'/all-receipts',
-                providesTags: [
-                    'Receipts'
                 ]
             }),
             addZone: builder.mutation({
@@ -383,7 +374,7 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$externals$5d2f40$reduxjs
             })
         })
 });
-const { useSignupMutation, useSigninMutation, useSignoutMutation, useFetchAdminQuery, useFetchUsersQuery, useFetchZonesQuery, useAddZoneMutation, useDeleteZoneMutation, useFetchCategoriesQuery, useAddCategoryMutation, useDeleteCategoryMutation, useFetchOrdersQuery, useGenerateImageMutation, useFetchReceiptsQuery } = adminApi;
+const { useSignupMutation, useSigninMutation, useSignoutMutation, useFetchAdminQuery, useFetchUsersQuery, useFetchZonesQuery, useAddZoneMutation, useDeleteZoneMutation, useFetchCategoriesQuery, useAddCategoryMutation, useDeleteCategoryMutation, useFetchOrdersQuery, useGenerateImageMutation } = adminApi;
 __turbopack_async_result__();
 } catch(e) { __turbopack_async_result__(e); } }, false);}),
 "[project]/src/redux/slices/adminSlice.js [ssr] (ecmascript)": ((__turbopack_context__) => {
@@ -1459,28 +1450,36 @@ function App({ Component, pageProps }) {
 }
 __turbopack_async_result__();
 } catch(e) { __turbopack_async_result__(e); } }, false);}),
-"[project]/src/pages/admin/signin.jsx [ssr] (ecmascript)": ((__turbopack_context__) => {
+"[externals]/sweetalert2 [external] (sweetalert2, cjs)": (function(__turbopack_context__) {
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, m: module, e: exports, t: __turbopack_require_real__ } = __turbopack_context__;
+{
+const mod = __turbopack_external_require__("sweetalert2", () => require("sweetalert2"));
+
+module.exports = mod;
+}}),
+"[project]/src/pages/admin/zones/all-receipts.jsx [ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, a: __turbopack_async_module__, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 __turbopack_async_module__(async (__turbopack_handle_async_dependencies__, __turbopack_async_result__) => { try {
 __turbopack_esm__({
-    "default": (()=>__TURBOPACK__default__export__)
+    "default": (()=>allReceipts)
 });
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__ = __turbopack_import__("[externals]/react/jsx-dev-runtime [external] (react/jsx-dev-runtime, cjs)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$api$2f$adminApi$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/redux/api/adminApi.js [ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$redux__$5b$external$5d$__$28$react$2d$redux$2c$__esm_import$29$__ = __turbopack_import__("[externals]/react-redux [external] (react-redux, esm_import)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$slices$2f$adminSlice$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/redux/slices/adminSlice.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__ = __turbopack_import__("[externals]/react [external] (react, cjs)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$api$2f$adminApi$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/redux/api/adminApi.js [ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/link.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/router.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$toastify__$5b$external$5d$__$28$react$2d$toastify$2c$__esm_import$29$__ = __turbopack_import__("[externals]/react-toastify [external] (react-toastify, esm_import)");
+var __TURBOPACK__imported__module__$5b$externals$5d2f$sweetalert2__$5b$external$5d$__$28$sweetalert2$2c$__cjs$29$__ = __turbopack_import__("[externals]/sweetalert2 [external] (sweetalert2, cjs)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$left$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowLeft$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/arrow-left.js [ssr] (ecmascript) <export default as ArrowLeft>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/trash-2.js [ssr] (ecmascript) <export default as Trash2>");
 var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
     __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$api$2f$adminApi$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__,
-    __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$redux__$5b$external$5d$__$28$react$2d$redux$2c$__esm_import$29$__,
-    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$slices$2f$adminSlice$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__,
     __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$toastify__$5b$external$5d$__$28$react$2d$toastify$2c$__esm_import$29$__
 ]);
-([__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$api$2f$adminApi$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$redux__$5b$external$5d$__$28$react$2d$redux$2c$__esm_import$29$__, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$slices$2f$adminSlice$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$toastify__$5b$external$5d$__$28$react$2d$toastify$2c$__esm_import$29$__] = __turbopack_async_dependencies__.then ? (await __turbopack_async_dependencies__)() : __turbopack_async_dependencies__);
+([__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$api$2f$adminApi$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$toastify__$5b$external$5d$__$28$react$2d$toastify$2c$__esm_import$29$__] = __turbopack_async_dependencies__.then ? (await __turbopack_async_dependencies__)() : __turbopack_async_dependencies__);
 ;
 ;
 ;
@@ -1488,286 +1487,465 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 ;
 ;
 ;
-const Signin = ()=>{
-    const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])("");
-    const [password, setPassword] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])("");
-    const [signinAdmin, { isLoading: isSigninLoading, isSuccess }] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$api$2f$adminApi$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useSigninMutation"])();
-    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(null); // no type annotations
-    const [validationError, setValidationError] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(null); // no type annotations
-    const dispatch = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$redux__$5b$external$5d$__$28$react$2d$redux$2c$__esm_import$29$__["useDispatch"])();
+;
+;
+function allReceipts() {
+    const { data: zones, isLoading, isError, refetch } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$api$2f$adminApi$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useFetchZonesQuery"])("");
+    const [deleteZone, { isLoading: isDeleting }] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$api$2f$adminApi$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useDeleteZoneMutation"])();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
-    const validateForm = ()=>{
-        if (!email.trim() || !password.trim()) {
-            return "Email and password are required.";
-        }
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            return "Please enter a valid email address.";
-        }
-        return null;
-    };
-    const handleSignin = async (e)=>{
-        e.preventDefault();
-        setError(null);
-        const validationMessage = validateForm();
-        if (validationMessage) {
-            setValidationError(validationMessage);
-            return;
-        }
-        setValidationError(null);
-        try {
-            const response = await signinAdmin({
-                email,
-                password
-            }).unwrap();
-            dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$slices$2f$adminSlice$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["setAdminDetails"])({
-                adminInfo: response,
-                token: response.token
-            }));
-            if (response.token) {
-                router.push("/admin/dashboard");
+    // Handle zone deletion
+    const handleDelete = async (id)=>{
+        const result = await __TURBOPACK__imported__module__$5b$externals$5d2f$sweetalert2__$5b$external$5d$__$28$sweetalert2$2c$__cjs$29$__["default"].fire({
+            title: "Are you sure?",
+            text: "You will not be able to recover this zone!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel!",
+            reverseButtons: true,
+            customClass: {
+                confirmButton: "btn btn-danger",
+                cancelButton: "btn btn-secondary"
             }
-        } catch (err) {
-            setError(err?.data?.message || "An unexpected error occurred.");
+        });
+        if (result.isConfirmed) {
+            try {
+                await deleteZone(id).unwrap();
+                __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$toastify__$5b$external$5d$__$28$react$2d$toastify$2c$__esm_import$29$__["toast"].success("Zone deleted successfully!", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: true
+                });
+                refetch();
+            } catch (error) {
+                __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$toastify__$5b$external$5d$__$28$react$2d$toastify$2c$__esm_import$29$__["toast"].error("Failed to delete zone. Please try again.", {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: true
+                });
+            }
         }
     };
-    (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
-        if (isSuccess) {
-            __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$toastify__$5b$external$5d$__$28$react$2d$toastify$2c$__esm_import$29$__["toast"].success("Welcome to Tastify Admin Panel!", {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: true
-            });
-        }
-    }, [
-        isSuccess
-    ]);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["Fragment"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+        className: "content-page",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-            className: "account-page",
+            className: "content",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "container-fluid p-0",
+                className: "container-xxl mt-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                    className: "row align-items-center g-0",
+                    className: "row",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: "col-xl-12",
+                        className: "col-12",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "row",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                className: "col-md-3 mx-auto",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                    className: "mb-0 border-0 p-md-5 p-lg-0 p-4",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                            className: "mb-4 p-0",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                                href: "/",
-                                                className: "auth-logo",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("b", {
-                                                        children: "Msm North."
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/pages/admin/signin.jsx",
-                                                        lineNumber: 72,
-                                                        columnNumber: 27
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/pages/admin/signin.jsx",
-                                                    lineNumber: 71,
-                                                    columnNumber: 25
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/pages/admin/signin.jsx",
-                                                lineNumber: 70,
-                                                columnNumber: 23
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/pages/admin/signin.jsx",
-                                            lineNumber: 69,
-                                            columnNumber: 21
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                            className: "pt-0",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("form", {
-                                                onSubmit: handleSignin,
-                                                className: "my-4",
+                            className: "card",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                    className: "card-header d-flex justify-content-between align-items-center",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                        className: "d-flex align-items-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/admin/dashboard",
                                                 children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                        className: "form-group mb-2",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("label", {
-                                                                htmlFor: "emailaddress",
-                                                                className: "form-label",
-                                                                children: "Email address"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/pages/admin/signin.jsx",
-                                                                lineNumber: 80,
-                                                                columnNumber: 27
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
-                                                                className: "form-control",
-                                                                id: "emailaddress",
-                                                                type: "email",
-                                                                value: email,
-                                                                onChange: (e)=>setEmail(e.target.value),
-                                                                placeholder: "Enter your email"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/pages/admin/signin.jsx",
-                                                                lineNumber: 83,
-                                                                columnNumber: 27
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/src/pages/admin/signin.jsx",
-                                                        lineNumber: 79,
-                                                        columnNumber: 25
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                        className: "form-group mb-3",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("label", {
-                                                                htmlFor: "password",
-                                                                className: "form-label",
-                                                                children: "Password"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/pages/admin/signin.jsx",
-                                                                lineNumber: 93,
-                                                                columnNumber: 27
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
-                                                                className: "form-control",
-                                                                type: "password",
-                                                                value: password,
-                                                                onChange: (e)=>setPassword(e.target.value),
-                                                                id: "password",
-                                                                placeholder: "Enter your password"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/pages/admin/signin.jsx",
-                                                                lineNumber: 96,
-                                                                columnNumber: 27
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/src/pages/admin/signin.jsx",
-                                                        lineNumber: 92,
-                                                        columnNumber: 25
-                                                    }, this),
-                                                    validationError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                        style: {
-                                                            color: "red"
-                                                        },
-                                                        children: validationError
+                                                    " ",
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$left$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowLeft$3e$__["ArrowLeft"], {
+                                                        size: 18,
+                                                        color: "#000",
+                                                        className: "me-3 mb-0 mt-0"
                                                     }, void 0, false, {
-                                                        fileName: "[project]/src/pages/admin/signin.jsx",
-                                                        lineNumber: 106,
-                                                        columnNumber: 27
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                        className: "form-group mb-0 row",
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                            className: "col-12",
-                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                                className: "d-grid",
-                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                                                                    className: "btn btn-dark",
-                                                                    type: "submit",
-                                                                    disabled: isSigninLoading,
-                                                                    children: isSigninLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                                        className: "loader-container",
-                                                                        children: [
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                                                className: "loader"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/src/pages/admin/signin.jsx",
-                                                                                lineNumber: 118,
-                                                                                columnNumber: 37
-                                                                            }, this),
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                                children: "Please Wait..."
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/src/pages/admin/signin.jsx",
-                                                                                lineNumber: 119,
-                                                                                columnNumber: 37
-                                                                            }, this)
-                                                                        ]
-                                                                    }, void 0, true, {
-                                                                        fileName: "[project]/src/pages/admin/signin.jsx",
-                                                                        lineNumber: 117,
-                                                                        columnNumber: 35
-                                                                    }, this) : "Sign In"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/src/pages/admin/signin.jsx",
-                                                                    lineNumber: 111,
-                                                                    columnNumber: 31
-                                                                }, this)
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/pages/admin/signin.jsx",
-                                                                lineNumber: 110,
-                                                                columnNumber: 29
-                                                            }, this)
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/pages/admin/signin.jsx",
-                                                            lineNumber: 109,
-                                                            columnNumber: 27
-                                                        }, this)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/pages/admin/signin.jsx",
-                                                        lineNumber: 108,
-                                                        columnNumber: 25
+                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                        lineNumber: 65,
+                                                        columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
-                                                fileName: "[project]/src/pages/admin/signin.jsx",
-                                                lineNumber: 78,
-                                                columnNumber: 23
+                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                lineNumber: 63,
+                                                columnNumber: 21
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h5", {
+                                                className: "font-weight-bolder mt-2",
+                                                children: "All Receipts"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                lineNumber: 71,
+                                                columnNumber: 21
                                             }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/pages/admin/signin.jsx",
-                                            lineNumber: 77,
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                        lineNumber: 62,
+                                        columnNumber: 19
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                    lineNumber: 61,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                    className: "card-body",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                        className: "table-responsive",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("table", {
+                                            id: "scroll-vertical-datatable",
+                                            className: "table table-bordered  nowrap w-100",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("thead", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("tr", {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("th", {
+                                                                children: "No."
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                lineNumber: 88,
+                                                                columnNumber: 27
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("th", {
+                                                                children: "Date"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                lineNumber: 89,
+                                                                columnNumber: 27
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("th", {
+                                                                children: "Zone Details"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                lineNumber: 90,
+                                                                columnNumber: 27
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("th", {
+                                                                children: "User Details"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                lineNumber: 91,
+                                                                columnNumber: 27
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("th", {
+                                                                children: "Amount"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                lineNumber: 92,
+                                                                columnNumber: 27
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("th", {
+                                                                children: "Payment Status"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                lineNumber: 93,
+                                                                columnNumber: 27
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("th", {
+                                                                children: "Manage"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                lineNumber: 94,
+                                                                columnNumber: 27
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                        lineNumber: 87,
+                                                        columnNumber: 25
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                    lineNumber: 86,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("tbody", {
+                                                    children: isLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("tr", {
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
+                                                            colSpan: 8,
+                                                            className: "text-center",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                                className: "loader-container d-flex ",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                                        className: "spinner-border spinner-border-sm text-dark me-2",
+                                                                        role: "status"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                        lineNumber: 102,
+                                                                        columnNumber: 33
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                                        className: "mt-3",
+                                                                        children: "Please wait..."
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                        lineNumber: 106,
+                                                                        columnNumber: 33
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                lineNumber: 101,
+                                                                columnNumber: 31
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                            lineNumber: 100,
+                                                            columnNumber: 29
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                        lineNumber: 99,
+                                                        columnNumber: 27
+                                                    }, this) : zones?.length > 0 ? zones.map((zone, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("tr", {
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
+                                                                    children: index + 1
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 113,
+                                                                    columnNumber: 31
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
+                                                                    children: zone.createdAt
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 114,
+                                                                    columnNumber: 31
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
+                                                                    className: "d-flex",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                                                            src: `https://backend.msmnorth.com${zone.image}`,
+                                                                            alt: zone.name,
+                                                                            className: "me-2",
+                                                                            style: {
+                                                                                width: "70px",
+                                                                                height: "70px",
+                                                                                objectFit: "cover"
+                                                                            }
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                            lineNumber: 116,
+                                                                            columnNumber: 33
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                                                    className: "mb-0",
+                                                                                    children: zone.name
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                                    lineNumber: 127,
+                                                                                    columnNumber: 35
+                                                                                }, this),
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                                                    className: "mb-0",
+                                                                                    children: zone.email
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                                    lineNumber: 128,
+                                                                                    columnNumber: 35
+                                                                                }, this),
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                                                    className: "mb-0",
+                                                                                    children: zone.phone
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                                    lineNumber: 129,
+                                                                                    columnNumber: 35
+                                                                                }, this)
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                            lineNumber: 126,
+                                                                            columnNumber: 33
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 115,
+                                                                    columnNumber: 31
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
+                                                                    children: zone.type
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 132,
+                                                                    columnNumber: 31
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
+                                                                    children: zone.zonename
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 133,
+                                                                    columnNumber: 31
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                        className: "d-flex align-items-center",
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                            className: "badge  rounded-pill",
+                                                                            style: {
+                                                                                backgroundColor: zone.status === "active" ? "green" : "red"
+                                                                            },
+                                                                            children: [
+                                                                                "- ",
+                                                                                zone.status
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                            lineNumber: 136,
+                                                                            columnNumber: 35
+                                                                        }, this)
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                        lineNumber: 135,
+                                                                        columnNumber: 33
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 134,
+                                                                    columnNumber: 31
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                                            className: "mb-0",
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("b", {
+                                                                                    children: "ZoneID : "
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                                    lineNumber: 165,
+                                                                                    columnNumber: 35
+                                                                                }, this),
+                                                                                " ",
+                                                                                zone.zoneId
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                            lineNumber: 164,
+                                                                            columnNumber: 33
+                                                                        }, this),
+                                                                        " ",
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("b", {
+                                                                                    children: "Password : "
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                                    lineNumber: 168,
+                                                                                    columnNumber: 35
+                                                                                }, this),
+                                                                                " ",
+                                                                                zone.password
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                            lineNumber: 167,
+                                                                            columnNumber: 33
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 163,
+                                                                    columnNumber: 31
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                                                                        className: "btn btn-danger btn-sm",
+                                                                        onClick: ()=>handleDelete(zone._id),
+                                                                        disabled: isDeleting,
+                                                                        children: isDeleting ? "Deleting..." : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
+                                                                            size: 14
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                            lineNumber: 183,
+                                                                            columnNumber: 37
+                                                                        }, this)
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                        lineNumber: 175,
+                                                                        columnNumber: 33
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 171,
+                                                                    columnNumber: 31
+                                                                }, this)
+                                                            ]
+                                                        }, zone._id, true, {
+                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                            lineNumber: 112,
+                                                            columnNumber: 29
+                                                        }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("tr", {
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
+                                                            colSpan: 8,
+                                                            className: "text-center",
+                                                            children: "No zones found."
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                            lineNumber: 191,
+                                                            columnNumber: 29
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                        lineNumber: 190,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                    lineNumber: 97,
+                                                    columnNumber: 23
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                            lineNumber: 82,
                                             columnNumber: 21
                                         }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/pages/admin/signin.jsx",
-                                    lineNumber: 68,
-                                    columnNumber: 19
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                        lineNumber: 81,
+                                        columnNumber: 19
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                    lineNumber: 80,
+                                    columnNumber: 17
                                 }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/src/pages/admin/signin.jsx",
-                                lineNumber: 67,
-                                columnNumber: 17
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/src/pages/admin/signin.jsx",
-                            lineNumber: 66,
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                            lineNumber: 60,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
-                        fileName: "[project]/src/pages/admin/signin.jsx",
-                        lineNumber: 65,
+                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                        lineNumber: 59,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
-                    fileName: "[project]/src/pages/admin/signin.jsx",
-                    lineNumber: 64,
+                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                    lineNumber: 58,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
-                fileName: "[project]/src/pages/admin/signin.jsx",
-                lineNumber: 63,
+                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                lineNumber: 57,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
-            fileName: "[project]/src/pages/admin/signin.jsx",
-            lineNumber: 62,
+            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+            lineNumber: 56,
             columnNumber: 7
         }, this)
-    }, void 0, false);
-};
-const __TURBOPACK__default__export__ = Signin;
+    }, void 0, false, {
+        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+        lineNumber: 55,
+        columnNumber: 5
+    }, this);
+}
 __turbopack_async_result__();
 } catch(e) { __turbopack_async_result__(e); } }, false);}),
 
 };
 
-//# sourceMappingURL=%5Broot%20of%20the%20server%5D__b3c4c5._.js.map
+//# sourceMappingURL=%5Broot%20of%20the%20server%5D__900d49._.js.map

@@ -563,6 +563,7 @@ __turbopack_esm__({
     "useFetchAdminQuery": (()=>useFetchAdminQuery),
     "useFetchCategoriesQuery": (()=>useFetchCategoriesQuery),
     "useFetchOrdersQuery": (()=>useFetchOrdersQuery),
+    "useFetchReceiptsQuery": (()=>useFetchReceiptsQuery),
     "useFetchUsersQuery": (()=>useFetchUsersQuery),
     "useFetchZonesQuery": (()=>useFetchZonesQuery),
     "useGenerateImageMutation": (()=>useGenerateImageMutation),
@@ -576,7 +577,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f
 const adminApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$query$2f$react$2f$rtk$2d$query$2d$react$2e$modern$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createApi"])({
     reducerPath: 'adminApi',
     baseQuery: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$query$2f$rtk$2d$query$2e$modern$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["fetchBaseQuery"])({
-        baseUrl: 'https://backend.msmnorth.com/api/admin',
+        baseUrl: 'http://localhost:4000/api/admin',
+        // baseUrl: 'https://backend.msmnorth.com/api/admin',
         credentials: 'include',
         prepareHeaders: (headers)=>{
             const token = localStorage.getItem('token');
@@ -589,7 +591,8 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_module
     tagTypes: [
         'Zones',
         'Categories',
-        'Orders'
+        'Orders',
+        'Receipts'
     ],
     endpoints: (builder)=>({
             signup: builder.mutation({
@@ -622,6 +625,12 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_module
                 query: ()=>'/all-zones',
                 providesTags: [
                     'Zones'
+                ]
+            }),
+            fetchReceipts: builder.query({
+                query: ()=>'/all-receipts',
+                providesTags: [
+                    'Receipts'
                 ]
             }),
             addZone: builder.mutation({
@@ -685,7 +694,7 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_module
             })
         })
 });
-const { useSignupMutation, useSigninMutation, useSignoutMutation, useFetchAdminQuery, useFetchUsersQuery, useFetchZonesQuery, useAddZoneMutation, useDeleteZoneMutation, useFetchCategoriesQuery, useAddCategoryMutation, useDeleteCategoryMutation, useFetchOrdersQuery, useGenerateImageMutation } = adminApi;
+const { useSignupMutation, useSigninMutation, useSignoutMutation, useFetchAdminQuery, useFetchUsersQuery, useFetchZonesQuery, useAddZoneMutation, useDeleteZoneMutation, useFetchCategoriesQuery, useAddCategoryMutation, useDeleteCategoryMutation, useFetchOrdersQuery, useGenerateImageMutation, useFetchReceiptsQuery } = adminApi;
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_refresh__.registerExports(module, globalThis.$RefreshHelpers$);
 }
@@ -765,7 +774,7 @@ function Dashboard() {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "row g-3",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "col-md-6 col-xl-3",
+                                                    className: "col-md-6 col-xl-12",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "card",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -798,11 +807,21 @@ function Dashboard() {
                                                                 " ",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                                                                     className: "btn btn-dark mt-2 btn-sm",
+                                                                    href: "/admin/zones/all-receipts",
+                                                                    children: "All Receipts"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/pages/admin/dashboard.jsx",
+                                                                    lineNumber: 37,
+                                                                    columnNumber: 25
+                                                                }, this),
+                                                                " ",
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                                                    className: "btn btn-dark mt-2 btn-sm",
                                                                     href: "/admin/zones/add-zone",
                                                                     children: "+ Add New Zone"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/pages/admin/dashboard.jsx",
-                                                                    lineNumber: 37,
+                                                                    lineNumber: 43,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -810,7 +829,7 @@ function Dashboard() {
                                                                     className: "apex-charts"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/pages/admin/dashboard.jsx",
-                                                                    lineNumber: 43,
+                                                                    lineNumber: 49,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]

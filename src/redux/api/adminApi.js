@@ -3,7 +3,9 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const adminApi = createApi({
   reducerPath: 'adminApi',
   baseQuery: fetchBaseQuery({
+    // baseUrl: 'http://localhost:4000/api/admin',
     baseUrl: 'https://backend.msmnorth.com/api/admin',
+
     credentials: 'include',
     prepareHeaders: (headers) => {
       const token = localStorage.getItem('token');
@@ -13,7 +15,7 @@ export const adminApi = createApi({
       return headers;
     },
   }),
-  tagTypes: ['Zones', 'Categories', 'Orders'], // Tags to manage cache invalidation
+  tagTypes: ['Zones', 'Categories', 'Orders', 'Receipts'], // Tags to manage cache invalidation
 
   endpoints: (builder) => ({
 
@@ -54,6 +56,14 @@ export const adminApi = createApi({
       query: () => '/all-zones',
       providesTags: ['Zones'],
     }),
+
+    fetchReceipts: builder.query({
+      query: () => '/all-receipts',
+      providesTags: ['Receipts'],
+    }),
+
+
+
 
     addZone: builder.mutation({
       query: (zone) => ({
@@ -125,4 +135,5 @@ export const {
   useDeleteCategoryMutation,
   useFetchOrdersQuery,
   useGenerateImageMutation,
+  useFetchReceiptsQuery,
 } = adminApi;

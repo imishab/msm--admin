@@ -249,6 +249,7 @@ __turbopack_esm__({
     "useFetchAdminQuery": (()=>useFetchAdminQuery),
     "useFetchCategoriesQuery": (()=>useFetchCategoriesQuery),
     "useFetchOrdersQuery": (()=>useFetchOrdersQuery),
+    "useFetchReceiptsQuery": (()=>useFetchReceiptsQuery),
     "useFetchUsersQuery": (()=>useFetchUsersQuery),
     "useFetchZonesQuery": (()=>useFetchZonesQuery),
     "useGenerateImageMutation": (()=>useGenerateImageMutation),
@@ -265,6 +266,7 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 const adminApi = (0, __TURBOPACK__imported__module__$5b$externals$5d2f40$reduxjs$2f$toolkit$2f$query$2f$react__$5b$external$5d$__$2840$reduxjs$2f$toolkit$2f$query$2f$react$2c$__esm_import$29$__["createApi"])({
     reducerPath: 'adminApi',
     baseQuery: (0, __TURBOPACK__imported__module__$5b$externals$5d2f40$reduxjs$2f$toolkit$2f$query$2f$react__$5b$external$5d$__$2840$reduxjs$2f$toolkit$2f$query$2f$react$2c$__esm_import$29$__["fetchBaseQuery"])({
+        // baseUrl: 'http://localhost:4000/api/admin',
         baseUrl: 'https://backend.msmnorth.com/api/admin',
         credentials: 'include',
         prepareHeaders: (headers)=>{
@@ -278,7 +280,8 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$externals$5d2f40$reduxjs
     tagTypes: [
         'Zones',
         'Categories',
-        'Orders'
+        'Orders',
+        'Receipts'
     ],
     endpoints: (builder)=>({
             signup: builder.mutation({
@@ -311,6 +314,12 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$externals$5d2f40$reduxjs
                 query: ()=>'/all-zones',
                 providesTags: [
                     'Zones'
+                ]
+            }),
+            fetchReceipts: builder.query({
+                query: ()=>'/all-receipts',
+                providesTags: [
+                    'Receipts'
                 ]
             }),
             addZone: builder.mutation({
@@ -374,7 +383,7 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$externals$5d2f40$reduxjs
             })
         })
 });
-const { useSignupMutation, useSigninMutation, useSignoutMutation, useFetchAdminQuery, useFetchUsersQuery, useFetchZonesQuery, useAddZoneMutation, useDeleteZoneMutation, useFetchCategoriesQuery, useAddCategoryMutation, useDeleteCategoryMutation, useFetchOrdersQuery, useGenerateImageMutation } = adminApi;
+const { useSignupMutation, useSigninMutation, useSignoutMutation, useFetchAdminQuery, useFetchUsersQuery, useFetchZonesQuery, useAddZoneMutation, useDeleteZoneMutation, useFetchCategoriesQuery, useAddCategoryMutation, useDeleteCategoryMutation, useFetchOrdersQuery, useGenerateImageMutation, useFetchReceiptsQuery } = adminApi;
 __turbopack_async_result__();
 } catch(e) { __turbopack_async_result__(e); } }, false);}),
 "[project]/src/redux/slices/adminSlice.js [ssr] (ecmascript)": ((__turbopack_context__) => {

@@ -1,4 +1,4 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/[root of the server]__f75deb._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/[root of the server]__095749._.js", {
 
 "[turbopack]/browser/dev/hmr-client/websocket.ts [client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -563,7 +563,6 @@ __turbopack_esm__({
     "useFetchAdminQuery": (()=>useFetchAdminQuery),
     "useFetchCategoriesQuery": (()=>useFetchCategoriesQuery),
     "useFetchOrdersQuery": (()=>useFetchOrdersQuery),
-    "useFetchReceiptsQuery": (()=>useFetchReceiptsQuery),
     "useFetchUsersQuery": (()=>useFetchUsersQuery),
     "useFetchZonesQuery": (()=>useFetchZonesQuery),
     "useGenerateImageMutation": (()=>useGenerateImageMutation),
@@ -577,8 +576,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f
 const adminApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$query$2f$react$2f$rtk$2d$query$2d$react$2e$modern$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createApi"])({
     reducerPath: 'adminApi',
     baseQuery: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$query$2f$rtk$2d$query$2e$modern$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["fetchBaseQuery"])({
-        baseUrl: 'http://localhost:4000/api/admin',
-        // baseUrl: 'https://backend.msmnorth.com/api/admin',
+        baseUrl: 'https://backend.msmnorth.com/api/admin',
         credentials: 'include',
         prepareHeaders: (headers)=>{
             const token = localStorage.getItem('token');
@@ -591,8 +589,7 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_module
     tagTypes: [
         'Zones',
         'Categories',
-        'Orders',
-        'Receipts'
+        'Orders'
     ],
     endpoints: (builder)=>({
             signup: builder.mutation({
@@ -625,12 +622,6 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_module
                 query: ()=>'/all-zones',
                 providesTags: [
                     'Zones'
-                ]
-            }),
-            fetchReceipts: builder.query({
-                query: ()=>'/all-receipts',
-                providesTags: [
-                    'Receipts'
                 ]
             }),
             addZone: builder.mutation({
@@ -694,18 +685,18 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_module
             })
         })
 });
-const { useSignupMutation, useSigninMutation, useSignoutMutation, useFetchAdminQuery, useFetchUsersQuery, useFetchZonesQuery, useAddZoneMutation, useDeleteZoneMutation, useFetchCategoriesQuery, useAddCategoryMutation, useDeleteCategoryMutation, useFetchOrdersQuery, useGenerateImageMutation, useFetchReceiptsQuery } = adminApi;
+const { useSignupMutation, useSigninMutation, useSignoutMutation, useFetchAdminQuery, useFetchUsersQuery, useFetchZonesQuery, useAddZoneMutation, useDeleteZoneMutation, useFetchCategoriesQuery, useAddCategoryMutation, useDeleteCategoryMutation, useFetchOrdersQuery, useGenerateImageMutation } = adminApi;
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_refresh__.registerExports(module, globalThis.$RefreshHelpers$);
 }
 }}),
-"[project]/src/pages/admin/zones/all-zones.jsx [client] (ecmascript)": ((__turbopack_context__) => {
+"[project]/src/pages/admin/zones/all-receipts.jsx [client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, k: __turbopack_refresh__, m: module, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
 __turbopack_esm__({
-    "default": (()=>allZones)
+    "default": (()=>allReceipts)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/index.js [client] (ecmascript)");
@@ -726,7 +717,7 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
-function allZones() {
+function allReceipts() {
     _s();
     const { data: zones, isLoading, isError, refetch } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$api$2f$adminApi$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useFetchZonesQuery"])("");
     const [deleteZone, { isLoading: isDeleting }] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$api$2f$adminApi$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useDeleteZoneMutation"])();
@@ -779,55 +770,44 @@ function allZones() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "card-header d-flex justify-content-between align-items-center",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "d-flex align-items-center",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                                    href: "/admin/dashboard",
-                                                    children: [
-                                                        " ",
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$left$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowLeft$3e$__["ArrowLeft"], {
-                                                            size: 18,
-                                                            color: "#000",
-                                                            className: "me-3 mb-0 mt-0"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                            lineNumber: 65,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                    lineNumber: 63,
-                                                    columnNumber: 21
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
-                                                    className: "font-weight-bolder mt-2",
-                                                    children: "All Zone Heads"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                    lineNumber: 71,
-                                                    columnNumber: 21
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                            lineNumber: 62,
-                                            columnNumber: 19
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                            href: "/admin/zones/add-zone",
-                                            className: "btn btn-dark btn-sm",
-                                            children: "+ Add New Zone Head"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                            lineNumber: 73,
-                                            columnNumber: 19
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "d-flex align-items-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/admin/dashboard",
+                                                children: [
+                                                    " ",
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$left$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowLeft$3e$__["ArrowLeft"], {
+                                                        size: 18,
+                                                        color: "#000",
+                                                        className: "me-3 mb-0 mt-0"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                        lineNumber: 65,
+                                                        columnNumber: 23
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                lineNumber: 63,
+                                                columnNumber: 21
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                                                className: "font-weight-bolder mt-2",
+                                                children: "All Receipts"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                lineNumber: 71,
+                                                columnNumber: 21
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                        lineNumber: 62,
+                                        columnNumber: 19
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                     lineNumber: 61,
                                     columnNumber: 17
                                 }, this),
@@ -845,60 +825,60 @@ function allZones() {
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
                                                                 children: "No."
                                                             }, void 0, false, {
-                                                                fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                                 lineNumber: 88,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                                                children: "Head Name"
+                                                                children: "Date"
                                                             }, void 0, false, {
-                                                                fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                                 lineNumber: 89,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                                                children: "Head Type"
+                                                                children: "Zone Details"
                                                             }, void 0, false, {
-                                                                fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                                 lineNumber: 90,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                                                children: "Zone Name"
+                                                                children: "User Details"
                                                             }, void 0, false, {
-                                                                fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                                 lineNumber: 91,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                                                children: "Status"
+                                                                children: "Amount"
                                                             }, void 0, false, {
-                                                                fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                                 lineNumber: 92,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                                                children: "Credentials"
+                                                                children: "Payment Status"
                                                             }, void 0, false, {
-                                                                fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                                 lineNumber: 93,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
                                                                 children: "Manage"
                                                             }, void 0, false, {
-                                                                fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                                 lineNumber: 94,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
-                                                        fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                         lineNumber: 87,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
-                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                     lineNumber: 86,
                                                     columnNumber: 23
                                                 }, this),
@@ -914,7 +894,7 @@ function allZones() {
                                                                         className: "spinner-border spinner-border-sm text-dark me-2",
                                                                         role: "status"
                                                                     }, void 0, false, {
-                                                                        fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                                         lineNumber: 102,
                                                                         columnNumber: 33
                                                                     }, this),
@@ -922,23 +902,23 @@ function allZones() {
                                                                         className: "mt-3",
                                                                         children: "Please wait..."
                                                                     }, void 0, false, {
-                                                                        fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                                         lineNumber: 106,
                                                                         columnNumber: 33
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
-                                                                fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                                 lineNumber: 101,
                                                                 columnNumber: 31
                                                             }, this)
                                                         }, void 0, false, {
-                                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                             lineNumber: 100,
                                                             columnNumber: 29
                                                         }, this)
                                                     }, void 0, false, {
-                                                        fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                         lineNumber: 99,
                                                         columnNumber: 27
                                                     }, this) : zones?.length > 0 ? zones.map((zone, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -946,8 +926,15 @@ function allZones() {
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                     children: index + 1
                                                                 }, void 0, false, {
-                                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                                     lineNumber: 113,
+                                                                    columnNumber: 31
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                                    children: zone.createdAt
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 114,
                                                                     columnNumber: 31
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -963,8 +950,8 @@ function allZones() {
                                                                                 objectFit: "cover"
                                                                             }
                                                                         }, void 0, false, {
-                                                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                            lineNumber: 115,
+                                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                            lineNumber: 116,
                                                                             columnNumber: 33
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -973,50 +960,50 @@ function allZones() {
                                                                                     className: "mb-0",
                                                                                     children: zone.name
                                                                                 }, void 0, false, {
-                                                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                                    lineNumber: 126,
+                                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                                    lineNumber: 127,
                                                                                     columnNumber: 35
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     className: "mb-0",
                                                                                     children: zone.email
                                                                                 }, void 0, false, {
-                                                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                                    lineNumber: 127,
+                                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                                    lineNumber: 128,
                                                                                     columnNumber: 35
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     className: "mb-0",
                                                                                     children: zone.phone
                                                                                 }, void 0, false, {
-                                                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                                    lineNumber: 128,
+                                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                                    lineNumber: 129,
                                                                                     columnNumber: 35
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
-                                                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                            lineNumber: 125,
+                                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                            lineNumber: 126,
                                                                             columnNumber: 33
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
-                                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                    lineNumber: 114,
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 115,
                                                                     columnNumber: 31
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                     children: zone.type
                                                                 }, void 0, false, {
-                                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                    lineNumber: 131,
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 132,
                                                                     columnNumber: 31
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                     children: zone.zonename
                                                                 }, void 0, false, {
-                                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                    lineNumber: 132,
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 133,
                                                                     columnNumber: 31
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1032,18 +1019,18 @@ function allZones() {
                                                                                 zone.status
                                                                             ]
                                                                         }, void 0, true, {
-                                                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                            lineNumber: 135,
+                                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                            lineNumber: 136,
                                                                             columnNumber: 35
                                                                         }, this)
                                                                     }, void 0, false, {
-                                                                        fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                        lineNumber: 134,
+                                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                        lineNumber: 135,
                                                                         columnNumber: 33
                                                                     }, this)
                                                                 }, void 0, false, {
-                                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                    lineNumber: 133,
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 134,
                                                                     columnNumber: 31
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1054,16 +1041,16 @@ function allZones() {
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
                                                                                     children: "ZoneID : "
                                                                                 }, void 0, false, {
-                                                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                                    lineNumber: 164,
+                                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                                    lineNumber: 165,
                                                                                     columnNumber: 35
                                                                                 }, this),
                                                                                 " ",
                                                                                 zone.zoneId
                                                                             ]
                                                                         }, void 0, true, {
-                                                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                            lineNumber: 163,
+                                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                            lineNumber: 164,
                                                                             columnNumber: 33
                                                                         }, this),
                                                                         " ",
@@ -1072,22 +1059,22 @@ function allZones() {
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
                                                                                     children: "Password : "
                                                                                 }, void 0, false, {
-                                                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                                    lineNumber: 167,
+                                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                                    lineNumber: 168,
                                                                                     columnNumber: 35
                                                                                 }, this),
                                                                                 " ",
                                                                                 zone.password
                                                                             ]
                                                                         }, void 0, true, {
-                                                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                            lineNumber: 166,
+                                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                            lineNumber: 167,
                                                                             columnNumber: 33
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
-                                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                    lineNumber: 162,
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 163,
                                                                     columnNumber: 31
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1098,23 +1085,23 @@ function allZones() {
                                                                         children: isDeleting ? "Deleting..." : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
                                                                             size: 14
                                                                         }, void 0, false, {
-                                                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                            lineNumber: 182,
+                                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                            lineNumber: 183,
                                                                             columnNumber: 37
                                                                         }, this)
                                                                     }, void 0, false, {
-                                                                        fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                        lineNumber: 174,
+                                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                        lineNumber: 175,
                                                                         columnNumber: 33
                                                                     }, this)
                                                                 }, void 0, false, {
-                                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                                    lineNumber: 170,
+                                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                                    lineNumber: 171,
                                                                     columnNumber: 31
                                                                 }, this)
                                                             ]
                                                         }, zone._id, true, {
-                                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                             lineNumber: 112,
                                                             columnNumber: 29
                                                         }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -1123,69 +1110,69 @@ function allZones() {
                                                             className: "text-center",
                                                             children: "No zones found."
                                                         }, void 0, false, {
-                                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                            lineNumber: 190,
+                                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                            lineNumber: 191,
                                                             columnNumber: 29
                                                         }, this)
                                                     }, void 0, false, {
-                                                        fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
-                                                        lineNumber: 189,
+                                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
+                                                        lineNumber: 190,
                                                         columnNumber: 27
                                                     }, this)
                                                 }, void 0, false, {
-                                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                                     lineNumber: 97,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true, {
-                                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                             lineNumber: 82,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
-                                        fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                         lineNumber: 81,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
-                                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                                     lineNumber: 80,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
-                            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                             lineNumber: 60,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
-                        fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                         lineNumber: 59,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
-                    fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                    fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                     lineNumber: 58,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
-                fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+                fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
                 lineNumber: 57,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
-            fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+            fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
             lineNumber: 56,
             columnNumber: 7
         }, this)
     }, void 0, false, {
-        fileName: "[project]/src/pages/admin/zones/all-zones.jsx",
+        fileName: "[project]/src/pages/admin/zones/all-receipts.jsx",
         lineNumber: 55,
         columnNumber: 5
     }, this);
 }
-_s(allZones, "7zlnatrTKtBL0jgvJUbXhn5sppo=", false, function() {
+_s(allReceipts, "7zlnatrTKtBL0jgvJUbXhn5sppo=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$api$2f$adminApi$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useFetchZonesQuery"],
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$api$2f$adminApi$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useDeleteZoneMutation"],
@@ -1196,15 +1183,15 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_refresh__.registerExports(module, globalThis.$RefreshHelpers$);
 }
 }}),
-"[next]/entry/page-loader.ts { PAGE => \"[project]/src/pages/admin/zones/all-zones.jsx [client] (ecmascript)\" } [client] (ecmascript)": (function(__turbopack_context__) {
+"[next]/entry/page-loader.ts { PAGE => \"[project]/src/pages/admin/zones/all-receipts.jsx [client] (ecmascript)\" } [client] (ecmascript)": (function(__turbopack_context__) {
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, m: module, e: exports, t: __turbopack_require_real__ } = __turbopack_context__;
 {
-const PAGE_PATH = "/admin/zones/all-zones";
+const PAGE_PATH = "/admin/zones/all-receipts";
 (window.__NEXT_P = window.__NEXT_P || []).push([
     PAGE_PATH,
     ()=>{
-        return __turbopack_require__("[project]/src/pages/admin/zones/all-zones.jsx [client] (ecmascript)");
+        return __turbopack_require__("[project]/src/pages/admin/zones/all-receipts.jsx [client] (ecmascript)");
     }
 ]);
 // @ts-expect-error module.hot exists
@@ -1217,13 +1204,13 @@ if (module.hot) {
     });
 }
 }}),
-"[project]/src/pages/admin/zones/all-zones.jsx (hmr-entry)": ((__turbopack_context__) => {
+"[project]/src/pages/admin/zones/all-receipts.jsx (hmr-entry)": ((__turbopack_context__) => {
 "use strict";
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, m: module, t: __turbopack_require_real__ } = __turbopack_context__;
 {
-__turbopack_require__("[next]/entry/page-loader.ts { PAGE => \"[project]/src/pages/admin/zones/all-zones.jsx [client] (ecmascript)\" } [client] (ecmascript)");
+__turbopack_require__("[next]/entry/page-loader.ts { PAGE => \"[project]/src/pages/admin/zones/all-receipts.jsx [client] (ecmascript)\" } [client] (ecmascript)");
 }}),
 }]);
 
-//# sourceMappingURL=%5Broot%20of%20the%20server%5D__f75deb._.js.map
+//# sourceMappingURL=%5Broot%20of%20the%20server%5D__095749._.js.map

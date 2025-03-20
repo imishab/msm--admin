@@ -22,7 +22,7 @@ export default function Dashboard() {
             <div className="row">
               <div className="col-md-12 col-xl-12">
                 <div className="row g-3">
-                  <div className="col-md-6 col-xl-3">
+                  <div className="col-md-6 col-xl-12">
                     <div className="card">
                       <div className="card-body">
                         <div className="d-flex align-items-center">
@@ -33,6 +33,12 @@ export default function Dashboard() {
                           href="/admin/zones/all-zones"
                         >
                           All Zones
+                        </Link>{" "}
+                        <Link
+                          className="btn btn-dark mt-2 btn-sm"
+                          href="/admin/zones/all-receipts"
+                        >
+                          All Receipts
                         </Link>{" "}
                         <Link
                           className="btn btn-dark mt-2 btn-sm"
