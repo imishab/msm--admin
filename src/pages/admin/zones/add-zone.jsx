@@ -13,10 +13,10 @@ export default function addProduct() {
   const [note, setNote] = useState("");
   const [zoneId, setZoneId] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState(""); // State to hold error messages
   const [image, setImage] = useState(null);
   const [addZone, { isLoading, isSuccess }] = useAddZoneMutation();
   const router = useRouter();
-
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {
       setImage(e.target.files[0]);
@@ -25,9 +25,10 @@ export default function addProduct() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage(""); // Clear previous errors
 
     if (!image) {
-      alert("Please upload an image.");
+      setErrorMessage("Please upload an image.");
       return;
     }
 
@@ -59,7 +60,7 @@ export default function addProduct() {
       // Redirect with success flag
       router.push("/admin/zones/all-zones");
     } catch (error) {
-      alert("Failed to add zone.");
+      setErrorMessage(error?.data?.message || "Failed to add zone.");
     }
   };
 
@@ -169,6 +170,9 @@ export default function addProduct() {
                                 <option value="Ponoor">Ponoor</option>
                                 <option value="Other">Other</option>
                               </select>
+                              {errorMessage && (
+                                <p className="text-danger">{errorMessage}</p>
+                              )}
                             </div>
                           </div>
                         </div>
