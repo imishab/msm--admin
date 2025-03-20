@@ -23,6 +23,12 @@ export default function addProduct() {
     }
   };
 
+  useEffect(() => {
+    if (errorMessage) {
+      alert(errorMessage); // Show browser alert
+    }
+  }, [errorMessage]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMessage(""); // Clear previous errors
@@ -170,9 +176,9 @@ export default function addProduct() {
                                 <option value="Ponoor">Ponoor</option>
                                 <option value="Other">Other</option>
                               </select>
-                              {errorMessage && (
+                              {/* {errorMessage && (
                                 <p className="text-danger">{errorMessage}</p>
-                              )}
+                              )} */}
                             </div>
                           </div>
                         </div>

@@ -732,6 +732,15 @@ function addProduct() {
             setImage(e.target.files[0]);
         }
     };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "addProduct.useEffect": ()=>{
+            if (errorMessage) {
+                alert(errorMessage); // Show browser alert
+            }
+        }
+    }["addProduct.useEffect"], [
+        errorMessage
+    ]);
     const handleSubmit = async (e)=>{
         e.preventDefault();
         setErrorMessage(""); // Clear previous errors
@@ -828,13 +837,13 @@ function addProduct() {
                                                                             className: "me-3 mb-0 mt-0"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                            lineNumber: 102,
+                                                                            lineNumber: 108,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                    lineNumber: 100,
+                                                                    lineNumber: 106,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -842,18 +851,18 @@ function addProduct() {
                                                                     children: "Add New Zone Head"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                    lineNumber: 108,
+                                                                    lineNumber: 114,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                            lineNumber: 99,
+                                                            lineNumber: 105,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                        lineNumber: 98,
+                                                        lineNumber: 104,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -867,7 +876,7 @@ function addProduct() {
                                                                         children: "Member Name"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                        lineNumber: 115,
+                                                                        lineNumber: 121,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -880,13 +889,13 @@ function addProduct() {
                                                                         required: true
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                        lineNumber: 116,
+                                                                        lineNumber: 122,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                lineNumber: 114,
+                                                                lineNumber: 120,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -902,7 +911,7 @@ function addProduct() {
                                                                                     children: "Member Type"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                    lineNumber: 129,
+                                                                                    lineNumber: 135,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -919,7 +928,7 @@ function addProduct() {
                                                                                             children: "Select Type"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 137,
+                                                                                            lineNumber: 143,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -927,7 +936,7 @@ function addProduct() {
                                                                                             children: "President"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 140,
+                                                                                            lineNumber: 146,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -935,7 +944,7 @@ function addProduct() {
                                                                                             children: "Seceretory"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 141,
+                                                                                            lineNumber: 147,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -943,7 +952,7 @@ function addProduct() {
                                                                                             children: "Trusurer"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 142,
+                                                                                            lineNumber: 148,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -951,7 +960,7 @@ function addProduct() {
                                                                                             children: "Member"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 143,
+                                                                                            lineNumber: 149,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -959,24 +968,24 @@ function addProduct() {
                                                                                             children: "Other"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 144,
+                                                                                            lineNumber: 150,
                                                                                             columnNumber: 33
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                    lineNumber: 130,
+                                                                                    lineNumber: 136,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                            lineNumber: 128,
+                                                                            lineNumber: 134,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                        lineNumber: 127,
+                                                                        lineNumber: 133,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -989,7 +998,7 @@ function addProduct() {
                                                                                     children: "Zone"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                    lineNumber: 150,
+                                                                                    lineNumber: 156,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1006,7 +1015,7 @@ function addProduct() {
                                                                                             children: "Select Zone"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 158,
+                                                                                            lineNumber: 164,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1014,7 +1023,7 @@ function addProduct() {
                                                                                             children: "Nadappuram"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 161,
+                                                                                            lineNumber: 167,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1022,7 +1031,7 @@ function addProduct() {
                                                                                             children: "Vadakara"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 162,
+                                                                                            lineNumber: 168,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1030,7 +1039,7 @@ function addProduct() {
                                                                                             children: "Payyoli"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 163,
+                                                                                            lineNumber: 169,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1038,7 +1047,7 @@ function addProduct() {
                                                                                             children: "Koyilandy"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 164,
+                                                                                            lineNumber: 170,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1046,7 +1055,7 @@ function addProduct() {
                                                                                             children: "Meppayur"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 165,
+                                                                                            lineNumber: 171,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1054,7 +1063,7 @@ function addProduct() {
                                                                                             children: "Perambra"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 167,
+                                                                                            lineNumber: 173,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1062,7 +1071,7 @@ function addProduct() {
                                                                                             children: "Kuttiyadi"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 168,
+                                                                                            lineNumber: 174,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1070,7 +1079,7 @@ function addProduct() {
                                                                                             children: "Balussery"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 169,
+                                                                                            lineNumber: 175,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1078,7 +1087,7 @@ function addProduct() {
                                                                                             children: "Ponoor"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 170,
+                                                                                            lineNumber: 176,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1086,38 +1095,30 @@ function addProduct() {
                                                                                             children: "Other"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                            lineNumber: 171,
+                                                                                            lineNumber: 177,
                                                                                             columnNumber: 33
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                    lineNumber: 151,
+                                                                                    lineNumber: 157,
                                                                                     columnNumber: 31
-                                                                                }, this),
-                                                                                errorMessage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                                    className: "text-danger",
-                                                                                    children: errorMessage
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                    lineNumber: 174,
-                                                                                    columnNumber: 33
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                            lineNumber: 149,
+                                                                            lineNumber: 155,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                        lineNumber: 148,
+                                                                        lineNumber: 154,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                lineNumber: 126,
+                                                                lineNumber: 132,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1133,7 +1134,7 @@ function addProduct() {
                                                                                     children: "Member Email"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                    lineNumber: 183,
+                                                                                    lineNumber: 189,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1146,18 +1147,18 @@ function addProduct() {
                                                                                     required: true
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                    lineNumber: 184,
+                                                                                    lineNumber: 190,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                            lineNumber: 182,
+                                                                            lineNumber: 188,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                        lineNumber: 181,
+                                                                        lineNumber: 187,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1170,7 +1171,7 @@ function addProduct() {
                                                                                     children: "Member Phone Number"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                    lineNumber: 197,
+                                                                                    lineNumber: 203,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1183,24 +1184,24 @@ function addProduct() {
                                                                                     required: true
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                    lineNumber: 200,
+                                                                                    lineNumber: 206,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                            lineNumber: 196,
+                                                                            lineNumber: 202,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                        lineNumber: 195,
+                                                                        lineNumber: 201,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                lineNumber: 180,
+                                                                lineNumber: 186,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1211,7 +1212,7 @@ function addProduct() {
                                                                         children: "Note (optional)"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                        lineNumber: 214,
+                                                                        lineNumber: 220,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1223,30 +1224,30 @@ function addProduct() {
                                                                         onChange: (e)=>setNote(e.target.value)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                        lineNumber: 215,
+                                                                        lineNumber: 221,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                lineNumber: 213,
+                                                                lineNumber: 219,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                        lineNumber: 113,
+                                                        lineNumber: 119,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                lineNumber: 97,
+                                                lineNumber: 103,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                            lineNumber: 96,
+                                            lineNumber: 102,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1264,7 +1265,7 @@ function addProduct() {
                                                                     children: "Upload Image (optional)"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                    lineNumber: 231,
+                                                                    lineNumber: 237,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1274,23 +1275,23 @@ function addProduct() {
                                                                     required: true
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                    lineNumber: 234,
+                                                                    lineNumber: 240,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                            lineNumber: 230,
+                                                            lineNumber: 236,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                        lineNumber: 229,
+                                                        lineNumber: 235,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                    lineNumber: 228,
+                                                    lineNumber: 234,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1302,12 +1303,12 @@ function addProduct() {
                                                                 children: "Login Credentials"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                lineNumber: 245,
+                                                                lineNumber: 251,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {}, void 0, false, {
                                                                 fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                lineNumber: 246,
+                                                                lineNumber: 252,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1323,7 +1324,7 @@ function addProduct() {
                                                                                     children: "Unit ID (auto generated)"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                    lineNumber: 250,
+                                                                                    lineNumber: 256,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1336,18 +1337,18 @@ function addProduct() {
                                                                                     readOnly: true
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                    lineNumber: 253,
+                                                                                    lineNumber: 259,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                            lineNumber: 249,
+                                                                            lineNumber: 255,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                        lineNumber: 248,
+                                                                        lineNumber: 254,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1360,7 +1361,7 @@ function addProduct() {
                                                                                     children: "Password"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                    lineNumber: 266,
+                                                                                    lineNumber: 272,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1373,47 +1374,47 @@ function addProduct() {
                                                                                     required: true
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                                    lineNumber: 267,
+                                                                                    lineNumber: 273,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                            lineNumber: 265,
+                                                                            lineNumber: 271,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                        lineNumber: 264,
+                                                                        lineNumber: 270,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                                lineNumber: 247,
+                                                                lineNumber: 253,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                        lineNumber: 244,
+                                                        lineNumber: 250,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                                    lineNumber: 243,
+                                                    lineNumber: 249,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                            lineNumber: 227,
+                                            lineNumber: 233,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                    lineNumber: 95,
+                                    lineNumber: 101,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1423,7 +1424,7 @@ function addProduct() {
                                     children: isLoading ? "Adding..." : "Add Zone Head"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                    lineNumber: 283,
+                                    lineNumber: 289,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1432,38 +1433,38 @@ function addProduct() {
                                     children: "Cancel"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                                    lineNumber: 290,
+                                    lineNumber: 296,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                            lineNumber: 94,
+                            lineNumber: 100,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                        lineNumber: 93,
+                        lineNumber: 99,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                    lineNumber: 92,
+                    lineNumber: 98,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-                lineNumber: 90,
+                lineNumber: 96,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/pages/admin/zones/add-zone.jsx",
-            lineNumber: 89,
+            lineNumber: 95,
             columnNumber: 7
         }, this)
     }, void 0, false);
 }
-_s(addProduct, "L7+d0UNrbYPfOMe2ajyo1Ibnb9Y=", false, function() {
+_s(addProduct, "1i6shnGcTFjimg7JWrEVD5ryUuA=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$redux$2f$api$2f$adminApi$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useAddZoneMutation"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"]
