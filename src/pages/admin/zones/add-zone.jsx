@@ -188,9 +188,9 @@ export default function addProduct() {
                             <div className="form-group mb-1">
                               <label className="mb-1">Member Email</label>
                               <input
-                                type="text"
+                                type="email"
                                 className="form-control"
-                                id="exampleFormControlInput1"
+                                id=""
                                 placeholder=""
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -204,9 +204,9 @@ export default function addProduct() {
                                 Member Phone Number
                               </label>
                               <input
-                                type="text"
+                                type="number"
                                 className="form-control"
-                                id="exampleFormControlInput1"
+                                id=""
                                 placeholder=""
                                 value={phone}
                                 onChange={(e) => setPhone(e.target.value)}

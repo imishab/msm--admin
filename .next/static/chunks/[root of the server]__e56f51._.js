@@ -563,6 +563,7 @@ __turbopack_esm__({
     "useFetchAdminQuery": (()=>useFetchAdminQuery),
     "useFetchCategoriesQuery": (()=>useFetchCategoriesQuery),
     "useFetchOrdersQuery": (()=>useFetchOrdersQuery),
+    "useFetchReceiptsQuery": (()=>useFetchReceiptsQuery),
     "useFetchUsersQuery": (()=>useFetchUsersQuery),
     "useFetchZonesQuery": (()=>useFetchZonesQuery),
     "useGenerateImageMutation": (()=>useGenerateImageMutation),
@@ -576,6 +577,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f
 const adminApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$query$2f$react$2f$rtk$2d$query$2d$react$2e$modern$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createApi"])({
     reducerPath: 'adminApi',
     baseQuery: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$query$2f$rtk$2d$query$2e$modern$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["fetchBaseQuery"])({
+        // baseUrl: 'http://localhost:4000/api/admin',
         baseUrl: 'https://backend.msmnorth.com/api/admin',
         credentials: 'include',
         prepareHeaders: (headers)=>{
@@ -589,7 +591,8 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_module
     tagTypes: [
         'Zones',
         'Categories',
-        'Orders'
+        'Orders',
+        'Receipts'
     ],
     endpoints: (builder)=>({
             signup: builder.mutation({
@@ -622,6 +625,12 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_module
                 query: ()=>'/all-zones',
                 providesTags: [
                     'Zones'
+                ]
+            }),
+            fetchReceipts: builder.query({
+                query: ()=>'/all-receipts',
+                providesTags: [
+                    'Receipts'
                 ]
             }),
             addZone: builder.mutation({
@@ -685,7 +694,7 @@ const adminApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_module
             })
         })
 });
-const { useSignupMutation, useSigninMutation, useSignoutMutation, useFetchAdminQuery, useFetchUsersQuery, useFetchZonesQuery, useAddZoneMutation, useDeleteZoneMutation, useFetchCategoriesQuery, useAddCategoryMutation, useDeleteCategoryMutation, useFetchOrdersQuery, useGenerateImageMutation } = adminApi;
+const { useSignupMutation, useSigninMutation, useSignoutMutation, useFetchAdminQuery, useFetchUsersQuery, useFetchZonesQuery, useAddZoneMutation, useDeleteZoneMutation, useFetchCategoriesQuery, useAddCategoryMutation, useDeleteCategoryMutation, useFetchOrdersQuery, useGenerateImageMutation, useFetchReceiptsQuery } = adminApi;
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_refresh__.registerExports(module, globalThis.$RefreshHelpers$);
 }
@@ -1138,9 +1147,9 @@ function addProduct() {
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                                    type: "text",
+                                                                                    type: "email",
                                                                                     className: "form-control",
-                                                                                    id: "exampleFormControlInput1",
+                                                                                    id: "",
                                                                                     placeholder: "",
                                                                                     value: email,
                                                                                     onChange: (e)=>setEmail(e.target.value),
@@ -1175,9 +1184,9 @@ function addProduct() {
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                                    type: "text",
+                                                                                    type: "number",
                                                                                     className: "form-control",
-                                                                                    id: "exampleFormControlInput1",
+                                                                                    id: "",
                                                                                     placeholder: "",
                                                                                     value: phone,
                                                                                     onChange: (e)=>setPhone(e.target.value),
